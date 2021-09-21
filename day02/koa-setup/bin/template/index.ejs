@@ -1,0 +1,15 @@
+const Koa = require("koa");
+<% if (middleware.router) { %>
+const Router = require("koa-router");
+  <% } %>
+const app = new Koa();
+<% if (middleware.router) { %>
+const router = new Router();
+router.get("/",(ctx)=>{
+         ctx.body = "hello koa-setup-heihei"
+})
+<% } %>
+
+app.listen(<%= port%>,()=>{
+  console.log("open server location:<%= port%>")
+})
