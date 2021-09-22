@@ -1,0 +1,12 @@
+{
+  "name": "test_guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "test": "^0.6.0"
+  }
+}
