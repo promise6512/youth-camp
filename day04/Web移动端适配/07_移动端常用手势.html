@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    #wrap{
+      margin: 20vh auto;
+      width: 260px;
+      height: 50vh;
+      border: 1px solid #000;
+      overflow: scroll;
+    }
+    #list{
+      margin: 0;
+      padding: 10px 5px;
+      list-style: none;
+      font: 16px/2 "宋体";
+    }
+    #list li{
+      border-bottom: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="list"></div>
+  </div>
+  <script>
+    {
+      let list = document.querySelector("#list");
+      list.innerHTML = new Array(100).fill(0).map((e,index) => `<li>li${index}</li>`).join('')
+    }
+  </script>
+  <script src="./js/gesture.js"></script>
+  <script>
+    {
+      let list = document.querySelector("#list");
+      //console.log(list)
+     // console.log(enableGesture)
+      enableGesture(list)
+    }
+  </script>
+</body>
+</html>

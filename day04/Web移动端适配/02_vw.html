@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    #box div {
+      width: 100vw;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+</body>
+<div id="box">
+  <div>尖或抽签</div>
+  <div>新品日历</div>
+</div>
+<script>
+  (function () {
+    var metaEl = document.createElement('meta');
+    var scale = devicePixelRatio;
+    metaEl.setAttribute('name', 'viewport');
+    metaEl.setAttribute('content', 'initial-scale=' + (1 / scale) + ', maximum-scale=' + (1 / scale) + ', minimum-scale=' + (1 / scale) + ', user-scalable=no');
+    document.documentElement.firstElementChild.appendChild(metaEl);
+  })();
+
+  //root em设置为屏幕的1/15
+  (function () {
+    let doc = document.documentElement;
+    doc.style.fontSize = window.innerWidth / 25 + "px";
+  })()
+  console.log(window.devicePixelRatio)
+  
+</script>
+</body>
+</html>
